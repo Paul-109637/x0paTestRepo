@@ -670,6 +670,7 @@ public class Stepdef {
 				ChromeOptions options=new ChromeOptions();
 				options.addArguments("headless");
 				options.addArguments("disable-gpu");
+			        options.addArguments("start-maximized");
 				driver=new ChromeDriver(options);
 				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
 		    driver.navigate().to(linktoapply);
@@ -3716,6 +3717,7 @@ public class Stepdef {
   			ChromeOptions options=new ChromeOptions();
   			options.addArguments("headless");
   			options.addArguments("disable-gpu");
+		 options.addArguments("start-maximized");
   			driver=new ChromeDriver(options);
   			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
 		    driver.navigate().to(linktotp);  
@@ -3916,9 +3918,9 @@ public class Stepdef {
          @Given("^verify collaborator login$")
          public void verify_collaborator_login() throws Throwable {
 //             DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-// 	        ChromeOptions options = new ChromeOptions();
+// 	        ChromeOptions options = new ();
 // 	        options.addArguments("--incognito");
-// 	        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+// 	        capabilities.setCapability(.CAPABILITY, options);
 // 	        System.setProperty("webdriver.chrome.driver","chromedriver.exe");
 // 	        driver.get("https://staging.x0pa.ai/app/roboroy/job/612330/collab");
          }
