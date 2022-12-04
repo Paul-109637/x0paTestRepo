@@ -735,7 +735,8 @@ public class Stepdef {
 
 		@Then("^candidate clicks on click here to login$")
 		public void candidate_clicks_on_click_here_to_login_span_class_xpa_link() throws Throwable {
-			driver.findElement(By.xpath("//span[@class='xpa-link']")).click();   
+			driver.findElement(By.xpath("//a[text()='Login']")).click();
+// 			driver.findElement(By.xpath("//span[@class='xpa-link']")).click();   
 		}
 		@When("^candidate enters mail \"([^\"]*)\" to login$")
 		public void candidate_enters_mail_to_login(String email) throws Throwable {
