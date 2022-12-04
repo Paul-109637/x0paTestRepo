@@ -55,6 +55,7 @@ public class Stepdef {
 			ChromeOptions options=new ChromeOptions();
 			options.addArguments("headless");
 			options.addArguments("disable-gpu");
+			 options.addArguments("start-maximized");
 			driver=new ChromeDriver(options);
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
 			 driver.get("http://staging.x0pa.ai/app/roboroy");
