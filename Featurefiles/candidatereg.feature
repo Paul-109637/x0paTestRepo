@@ -20,6 +20,6 @@ Then verify captcha and click on Login button
 Given close Browser
 Examples:
 |firstname|lastname|mail                |password    |conformpassword |
-|Praveen  |kumar   |Fx790c428@a0007.com |akshay@0001 |akshay@0001     |
+|Praveen  |kumar   |Fx790c428@a0008.com |akshay@0001 |akshay@0001     |
 
 #Scenario: close the browser
