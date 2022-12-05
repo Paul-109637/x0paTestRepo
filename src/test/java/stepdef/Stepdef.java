@@ -55,8 +55,10 @@ public class Stepdef {
 			ChromeOptions options=new ChromeOptions();
 			options.addArguments("headless");
 			options.addArguments("disable-gpu");
-			 options.addArguments("start-maximized");
+// 			 options.addArguments("start-maximized");
 			driver=new ChromeDriver(options);
+			  driver.manage().deleteAllCookies();
+	                  driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
 			 driver.get("http://staging.x0pa.ai/app/roboroy");
 		}
@@ -670,8 +672,10 @@ public class Stepdef {
 				ChromeOptions options=new ChromeOptions();
 				options.addArguments("headless");
 				options.addArguments("disable-gpu");
-			        options.addArguments("start-maximized");
+// 			        options.addArguments("start-maximized");
 				driver=new ChromeDriver(options);
+			        driver.manage().deleteAllCookies();
+	                        driver.manage().window().maximize();
 				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
 		    driver.navigate().to(linktoapply);
 		}
@@ -735,6 +739,7 @@ public class Stepdef {
 
 		@Then("^candidate clicks on click here to login$")
 		public void candidate_clicks_on_click_here_to_login_span_class_xpa_link() throws Throwable {
+			Thread.sleep(3000);
 			driver.findElement(By.xpath("//a[text()='Login']")).click();
 // 			driver.findElement(By.xpath("//span[@class='xpa-link']")).click();   
 		}
@@ -3718,8 +3723,10 @@ public class Stepdef {
   			ChromeOptions options=new ChromeOptions();
   			options.addArguments("headless");
   			options.addArguments("disable-gpu");
-		 options.addArguments("start-maximized");
+// 		 options.addArguments("start-maximized");
   			driver=new ChromeDriver(options);
+		   driver.manage().deleteAllCookies();
+	        driver.manage().window().maximize();
   			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS); 
 		    driver.navigate().to(linktotp);  
          }
